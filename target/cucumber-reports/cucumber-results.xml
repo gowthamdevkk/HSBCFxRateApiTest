@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="55" time="76.654946">
+    <testcase classname="Date Exchange Rates" name="Validate the default date" time="3.037122">
+        <failure message="org.junit.ComparisonFailure: expected:&lt;&quot;2020-04-2[5]&quot;&gt; but was:&lt;&quot;2020-04-2[4]&quot;&gt;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#10;&#9;at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)&#10;&#9;at stepDefinitions.RatesSteps.iShouldSeeTheDefaultDateAsYesterday(RatesSteps.java:79)&#10;&#9;at ✽.I should see the default date as yesterday(src/test/resources/features/dateFXRates.feature:10)&#10;">
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "latest" at the end of Exchange rates Base API................passed
+Then I should see the default date as yesterday.............................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<"2020-04-2[5]"> but was:<"2020-04-2[4]">
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDefaultDateAsYesterday(RatesSteps.java:79)
+	at ✽.I should see the default date as yesterday(src/test/resources/features/dateFXRates.feature:10)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate historic exchange rates" time="1.355708">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with "symbols" as "USD".passed
+Then I should see the "USD" and exchange rate as 1.4481.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate historic exchange rates 2" time="1.041095">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2000-01-01" information to the FX api along with "symbols" as "SIT".passed
+Then I should see the "SIT" and exchange rate as 198.9055...................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate historic exchange rates 3" time="1.039708">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "1999-01-04" information to the FX api along with "symbols" as "KRW".passed
+Then I should see the "KRW" and exchange rate as 1398.59....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate historic exchange rates 4" time="1.234124">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2020-01-04" information to the FX api along with "symbols" as "PHP".passed
+Then I should see the "PHP" and exchange rate as 56.983.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate future and valid dates" time="1.387133">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "2010-01-12" at the end of Exchange rates Base API............passed
+Then I should see valid date in the response................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate future and valid dates 2" time="1.125176">
+        <failure message="org.junit.ComparisonFailure: expected:&lt;&quot;2020-04-2[5]&quot;&gt; but was:&lt;&quot;2020-04-2[4]&quot;&gt;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#10;&#9;at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)&#10;&#9;at stepDefinitions.RatesSteps.iShouldSeeValidDateInTheResponse(RatesSteps.java:66)&#10;&#9;at ✽.I should see valid date in the response(src/test/resources/features/dateFXRates.feature:29)&#10;">
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "2050-01-12" at the end of Exchange rates Base API............passed
+Then I should see valid date in the response................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<"2020-04-2[5]"> but was:<"2020-04-2[4]">
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)
+	at stepDefinitions.RatesSteps.iShouldSeeValidDateInTheResponse(RatesSteps.java:66)
+	at ✽.I should see valid date in the response(src/test/resources/features/dateFXRates.feature:29)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the past and invalid dates" time="3.246016">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "1999-01-03" at the end of Exchange rates Base API............passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the past and invalid dates 2" time="0.959642">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "2020-01-" at the end of Exchange rates Base API..............passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the past and invalid dates 3" time="0.957325">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "2020-13-12" at the end of Exchange rates Base API............passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the past and invalid dates 4" time="1.537007">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "2018-12-32" at the end of Exchange rates Base API............passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the past and invalid dates 5" time="1.944709">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "20-12-12" at the end of Exchange rates Base API..............passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the past and invalid dates 6" time="1.276339">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "19990101" at the end of Exchange rates Base API..............passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the default base rate can be changed to any other currency" time="1.281411">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with "base" as "IDR".passed
+Then I should see the "base" rate as "IDR"..................................passed
+And I should see the date as 2010-01-12 in the response.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the default base rate can be changed to any other currency 2" time="1.084677">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with "base" as "ZAR".passed
+Then I should see the "base" rate as "ZAR"..................................passed
+And I should see the date as 2010-01-12 in the response.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the default base rate can be changed to any other currency 3" time="2.090115">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with "base" as "TRY".passed
+Then I should see the "base" rate as "TRY"..................................passed
+And I should see the date as 2010-01-12 in the response.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate specific currency rates" time="1.391164">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2020-04-25" information to the FX api along with "symbols" as "USD,USD".passed
+Then I should see the exchange rate based on the USD,USD....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate specific currency rates 2" time="1.170897">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2020-04-25" information to the FX api along with "symbols" as "USD,GBP".passed
+Then I should see the exchange rate based on the USD,GBP....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate specific currency rates 3" time="1.535041">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2020-04-25" information to the FX api along with "symbols" as "RON,DKK,INR".passed
+Then I should see the exchange rate based on the RON,DKK,INR................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate specific exchange rates by setting the symbols &amp; base parameter with specific date" time="2.042374">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2019-01-12" information to the FX api along with base "IDR" and symbols "IDR".passed
+Then I should see the "base" rate as "IDR"..................................passed
+And I should see the exchange rate based on the IDR.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate specific exchange rates by setting the symbols &amp; base parameter with specific date 2" time="1.84197">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2019-01-12" information to the FX api along with base "CAD" and symbols "RON,DKK".passed
+Then I should see the "base" rate as "CAD"..................................passed
+And I should see the exchange rate based on the RON,DKK.....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate specific exchange rates by setting the symbols &amp; base parameter with specific date 3" time="0.922351">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2019-01-12" information to the FX api along with base "USD" and symbols "GBP".passed
+Then I should see the "base" rate as "USD"..................................passed
+And I should see the exchange rate based on the GBP.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate specific exchange rates by setting the symbols &amp; base parameter with specific date 4" time="1.328539">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2019-01-12" information to the FX api along with base "INR" and symbols "AUD".passed
+Then I should see the "base" rate as "INR"..................................passed
+And I should see the exchange rate based on the AUD.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate specific exchange rates by setting the symbols &amp; base parameter with specific date 5" time="1.332102">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2019-01-12" information to the FX api along with base "USD" and symbols "USD".passed
+Then I should see the "base" rate as "USD"..................................passed
+And I should see the exchange rate based on the USD.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate invalid base rate and exchange currencies" time="1.252179">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with base "USd" and symbols "GBP".passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate invalid base rate and exchange currencies 2" time="1.247245">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with base "inr" and symbols "AUD".passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate invalid base rate and exchange currencies 3" time="0.978653">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with base "INR" and symbols "AOD".passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate invalid base rate and exchange currencies 4" time="1.329126">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with base "INR,GBP" and symbols "AUD".passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the base rate is Euro for blank base rate" time="1.33695">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with "base" as "".passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the base rate is Euro for blank symbol" time="1.054798">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with "symbols" as "".passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the default base rate for blank symbol with valid base rate" time="1.089096">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with base "INR" and symbols "".passed
+Then I should see the "base" rate as "INR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the base rate is Euro for blank base rate and symbol" time="1.085018">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with base "" and symbols "".passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Date Exchange Rates" name="Validate the base rate is Euro for blank base rate with valid symbol" time="1.16769">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "2010-01-12" information to the FX api along with base "" and symbols "CAD".passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate API availability" time="1.543183">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "latest" at the end of Exchange rates Base API................passed
+Then I should see the HTTP response code as 200.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate invalid API response payload" time="1.607294">
+        <failure message="org.junit.ComparisonFailure: expected:&lt;&quot;2020-04-2[5]&quot;&gt; but was:&lt;&quot;2020-04-2[4]&quot;&gt;&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#10;&#9;at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)&#10;&#9;at stepDefinitions.RatesSteps.iShouldSeeTheDefaultDateAsYesterday(RatesSteps.java:79)&#10;&#9;at ✽.I should see the default date as yesterday(src/test/resources/features/latestFXRates.feature:17)&#10;">
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "latest" at the end of Exchange rates Base API................passed
+Then I should see the "base" rate as "EUR"..................................passed
+And I should see the default date as yesterday..............................failed
+And I should see GBP as one of the exchange rate............................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<"2020-04-2[5]"> but was:<"2020-04-2[4]">
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDefaultDateAsYesterday(RatesSteps.java:79)
+	at ✽.I should see the default date as yesterday(src/test/resources/features/latestFXRates.feature:17)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the default base rate is Euro" time="1.016386">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "latest" at the end of Exchange rates Base API................passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the default base rate can be changed to any other currencies" time="1.113065">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with "base" as "IDR".passed
+Then I should see the "base" rate as "IDR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the default base rate can be changed to any other currencies 2" time="1.032516">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with "base" as "ZAR".passed
+Then I should see the "base" rate as "ZAR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the default base rate can be changed to any other currencies 3" time="0.859168">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with "base" as "TRY".passed
+Then I should see the "base" rate as "TRY"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate specific currency rates" time="0.851502">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with "symbols" as "USD,USD".passed
+Then I should see the exchange rate based on the USD,USD....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate specific currency rates 2" time="1.061579">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with "symbols" as "USD,GBP".passed
+Then I should see the exchange rate based on the USD,GBP....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate specific currency rates 3" time="1.71083">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with "symbols" as "RON,DKK,INR".passed
+Then I should see the exchange rate based on the RON,DKK,INR................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate specific currency rate to a base rate" time="1.999678">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "USD" and symbols "GBP".passed
+Then I should see the "base" rate as "USD"..................................passed
+And I should see the exchange rate based on the GBP.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate specific currency rate to a base rate 2" time="1.188707">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "INR" and symbols "AUD".passed
+Then I should see the "base" rate as "INR"..................................passed
+And I should see the exchange rate based on the AUD.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate specific currency rate to a base rate 3" time="1.064604">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "USD" and symbols "USD".passed
+Then I should see the "base" rate as "USD"..................................passed
+And I should see the exchange rate based on the USD.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate invalid API response" time="2.249626">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I append "lates" at the end of Exchange rates Base API.................passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate invalid base rate and exchange currencies" time="1.223906">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "USd" and symbols "GBP".passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate invalid base rate and exchange currencies 2" time="3.03871">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "inr" and symbols "AUD".passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate invalid base rate and exchange currencies 3" time="1.036545">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "INR" and symbols "AOD".passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate invalid base rate and exchange currencies 4" time="1.355633">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "INR,GBP" and symbols "AUD".passed
+Then I should see the HTTP response code as 400.............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the base rate is Euro for blank base rate" time="1.39922">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with "base" as ""..passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the base rate is Euro for blank symbol" time="1.465726">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with "symbols" as "".passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the default base rate for blank symbol with valid base rate" time="1.023921">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "INR" and symbols "".passed
+Then I should see the "base" rate as "INR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the base rate is Euro for blank base rate and symbol" time="1.172694">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "" and symbols "".passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Latest Exchange Rates" name="Validate the base rate is Euro for blank base rate with valid symbol" time="0.937953">
+        <system-out>
+            <![CDATA[Given I have access to Foreign Exchange rates api...........................passed
+When I pass the "latest" information to the FX api along with base "" and symbols "CAD".passed
+Then I should see the "base" rate as "EUR"..................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

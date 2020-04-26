@@ -1,0 +1,449 @@
+Feature: Date Exchange Rates
+  As a User
+  I want to be able to covers different scenarios with specific Dates on Exchange Rates API
+  So that I can make sure that the API is fit for purpose in the use of the exchange rate for financial reasons
+
+  @Regression @Smoke
+  Scenario: Validate the default date                            # src/test/resources/features/dateFXRates.feature:7
+    Given I have access to Foreign Exchange rates api            # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "latest" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the default date as yesterday              # RatesSteps.iShouldSeeTheDefaultDateAsYesterday()
+      org.junit.ComparisonFailure: expected:<"2020-04-2[5]"> but was:<"2020-04-2[4]">
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDefaultDateAsYesterday(RatesSteps.java:79)
+	at ✽.I should see the default date as yesterday(src/test/resources/features/dateFXRates.feature:10)
+
+
+  @Regression @Smoke
+  Scenario Outline: Validate historic exchange rates # src/test/resources/features/dateFXRates.feature:13
+    Given I have access to Foreign Exchange rates api
+    When I pass the "<date>" information to the FX api along with "symbols" as "<symbols>"
+    Then I should see the "<symbols>" and exchange rate as <exchangeRate>
+
+    Examples: 
+
+  @Regression @Smoke
+  Scenario Outline: Validate historic exchange rates                                     # src/test/resources/features/dateFXRates.feature:20
+    Given I have access to Foreign Exchange rates api                                    # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with "symbols" as "USD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "USD" and exchange rate as 1.4481                              # RatesSteps.iShouldSeeTheAndExchangeRateAs(String,Double)
+
+  @Regression @Smoke
+  Scenario Outline: Validate historic exchange rates                                     # src/test/resources/features/dateFXRates.feature:21
+    Given I have access to Foreign Exchange rates api                                    # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2000-01-01" information to the FX api along with "symbols" as "SIT" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "SIT" and exchange rate as 198.9055                            # RatesSteps.iShouldSeeTheAndExchangeRateAs(String,Double)
+
+  @Regression @Smoke
+  Scenario Outline: Validate historic exchange rates                                     # src/test/resources/features/dateFXRates.feature:22
+    Given I have access to Foreign Exchange rates api                                    # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "1999-01-04" information to the FX api along with "symbols" as "KRW" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "KRW" and exchange rate as 1398.59                             # RatesSteps.iShouldSeeTheAndExchangeRateAs(String,Double)
+
+  @Regression @Smoke
+  Scenario Outline: Validate historic exchange rates                                     # src/test/resources/features/dateFXRates.feature:23
+    Given I have access to Foreign Exchange rates api                                    # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2020-01-04" information to the FX api along with "symbols" as "PHP" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "PHP" and exchange rate as 56.983                              # RatesSteps.iShouldSeeTheAndExchangeRateAs(String,Double)
+
+  @Regression @Smoke
+  Scenario Outline: Validate future and valid dates # src/test/resources/features/dateFXRates.feature:26
+    Given I have access to Foreign Exchange rates api
+    When I append "<date>" at the end of Exchange rates Base API
+    Then I should see valid date in the response
+
+    Examples: 
+
+  @Regression @Smoke
+  Scenario Outline: Validate future and valid dates                  # src/test/resources/features/dateFXRates.feature:33
+    Given I have access to Foreign Exchange rates api                # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "2010-01-12" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see valid date in the response                     # RatesSteps.iShouldSeeValidDateInTheResponse()
+
+  @Regression @Smoke
+  Scenario Outline: Validate future and valid dates                  # src/test/resources/features/dateFXRates.feature:34
+    Given I have access to Foreign Exchange rates api                # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "2050-01-12" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see valid date in the response                     # RatesSteps.iShouldSeeValidDateInTheResponse()
+      org.junit.ComparisonFailure: expected:<"2020-04-2[5]"> but was:<"2020-04-2[4]">
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)
+	at stepDefinitions.RatesSteps.iShouldSeeValidDateInTheResponse(RatesSteps.java:66)
+	at ✽.I should see valid date in the response(src/test/resources/features/dateFXRates.feature:29)
+
+
+  @Regression
+  Scenario Outline: Validate the past and invalid dates # src/test/resources/features/dateFXRates.feature:37
+    Given I have access to Foreign Exchange rates api
+    When I append "<date>" at the end of Exchange rates Base API
+    Then I should see the HTTP response code as 400
+
+    Examples: 
+
+  @Regression
+  Scenario Outline: Validate the past and invalid dates              # src/test/resources/features/dateFXRates.feature:44
+    Given I have access to Foreign Exchange rates api                # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "1999-01-03" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the HTTP response code as 400                  # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate the past and invalid dates            # src/test/resources/features/dateFXRates.feature:45
+    Given I have access to Foreign Exchange rates api              # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "2020-01-" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the HTTP response code as 400                # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate the past and invalid dates              # src/test/resources/features/dateFXRates.feature:46
+    Given I have access to Foreign Exchange rates api                # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "2020-13-12" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the HTTP response code as 400                  # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate the past and invalid dates              # src/test/resources/features/dateFXRates.feature:47
+    Given I have access to Foreign Exchange rates api                # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "2018-12-32" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the HTTP response code as 400                  # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate the past and invalid dates            # src/test/resources/features/dateFXRates.feature:48
+    Given I have access to Foreign Exchange rates api              # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "20-12-12" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the HTTP response code as 400                # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate the past and invalid dates            # src/test/resources/features/dateFXRates.feature:49
+    Given I have access to Foreign Exchange rates api              # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "19990101" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the HTTP response code as 400                # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  Scenario Outline: Validate the default base rate can be changed to any other currency # src/test/resources/features/dateFXRates.feature:51
+    Given I have access to Foreign Exchange rates api
+    When I pass the "2010-01-12" information to the FX api along with "base" as "<currency>"
+    Then I should see the "base" rate as "<currency>"
+    And I should see the date as 2010-01-12 in the response
+
+    Examples: 
+
+  Scenario Outline: Validate the default base rate can be changed to any other currency # src/test/resources/features/dateFXRates.feature:59
+    Given I have access to Foreign Exchange rates api                                   # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with "base" as "IDR"   # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "IDR"                                          # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the date as 2010-01-12 in the response                             # RatesSteps.iShouldSeeTheDateAsInTheResponse(String)
+
+  Scenario Outline: Validate the default base rate can be changed to any other currency # src/test/resources/features/dateFXRates.feature:60
+    Given I have access to Foreign Exchange rates api                                   # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with "base" as "ZAR"   # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "ZAR"                                          # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the date as 2010-01-12 in the response                             # RatesSteps.iShouldSeeTheDateAsInTheResponse(String)
+
+  Scenario Outline: Validate the default base rate can be changed to any other currency # src/test/resources/features/dateFXRates.feature:61
+    Given I have access to Foreign Exchange rates api                                   # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with "base" as "TRY"   # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "TRY"                                          # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the date as 2010-01-12 in the response                             # RatesSteps.iShouldSeeTheDateAsInTheResponse(String)
+
+  Scenario Outline: Validate specific currency rates # src/test/resources/features/dateFXRates.feature:63
+    Given I have access to Foreign Exchange rates api
+    When I pass the "2020-04-25" information to the FX api along with "symbols" as "<symbols>"
+    Then I should see the exchange rate based on the <symbols>
+
+    Examples: 
+
+  Scenario Outline: Validate specific currency rates                                         # src/test/resources/features/dateFXRates.feature:70
+    Given I have access to Foreign Exchange rates api                                        # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2020-04-25" information to the FX api along with "symbols" as "USD,USD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the exchange rate based on the USD,USD                                 # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  Scenario Outline: Validate specific currency rates                                         # src/test/resources/features/dateFXRates.feature:71
+    Given I have access to Foreign Exchange rates api                                        # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2020-04-25" information to the FX api along with "symbols" as "USD,GBP" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the exchange rate based on the USD,GBP                                 # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  Scenario Outline: Validate specific currency rates                                             # src/test/resources/features/dateFXRates.feature:72
+    Given I have access to Foreign Exchange rates api                                            # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2020-04-25" information to the FX api along with "symbols" as "RON,DKK,INR" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the exchange rate based on the RON,DKK,INR                                 # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific exchange rates by setting the symbols & base parameter with specific date # src/test/resources/features/dateFXRates.feature:75
+    Given I have access to Foreign Exchange rates api
+    When I pass the "2019-01-12" information to the FX api along with base "<currency>" and symbols "<symbols>"
+    Then I should see the "base" rate as "<currency>"
+    And I should see the exchange rate based on the <symbols>
+
+    Examples: 
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific exchange rates by setting the symbols & base parameter with specific date # src/test/resources/features/dateFXRates.feature:83
+    Given I have access to Foreign Exchange rates api                                                           # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2019-01-12" information to the FX api along with base "IDR" and symbols "IDR"              # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "IDR"                                                                  # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the exchange rate based on the IDR                                                         # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific exchange rates by setting the symbols & base parameter with specific date # src/test/resources/features/dateFXRates.feature:84
+    Given I have access to Foreign Exchange rates api                                                           # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2019-01-12" information to the FX api along with base "CAD" and symbols "RON,DKK"          # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "CAD"                                                                  # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the exchange rate based on the RON,DKK                                                     # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific exchange rates by setting the symbols & base parameter with specific date # src/test/resources/features/dateFXRates.feature:85
+    Given I have access to Foreign Exchange rates api                                                           # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2019-01-12" information to the FX api along with base "USD" and symbols "GBP"              # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "USD"                                                                  # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the exchange rate based on the GBP                                                         # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific exchange rates by setting the symbols & base parameter with specific date # src/test/resources/features/dateFXRates.feature:86
+    Given I have access to Foreign Exchange rates api                                                           # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2019-01-12" information to the FX api along with base "INR" and symbols "AUD"              # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "INR"                                                                  # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the exchange rate based on the AUD                                                         # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific exchange rates by setting the symbols & base parameter with specific date # src/test/resources/features/dateFXRates.feature:87
+    Given I have access to Foreign Exchange rates api                                                           # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2019-01-12" information to the FX api along with base "USD" and symbols "USD"              # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "USD"                                                                  # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the exchange rate based on the USD                                                         # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies # src/test/resources/features/dateFXRates.feature:90
+    Given I have access to Foreign Exchange rates api
+    When I pass the "2010-01-12" information to the FX api along with base "<currency>" and symbols "<symbols>"
+    Then I should see the HTTP response code as 400
+
+    Examples: 
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies                             # src/test/resources/features/dateFXRates.feature:97
+    Given I have access to Foreign Exchange rates api                                              # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with base "USd" and symbols "GBP" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the HTTP response code as 400                                                # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies                             # src/test/resources/features/dateFXRates.feature:98
+    Given I have access to Foreign Exchange rates api                                              # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with base "inr" and symbols "AUD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the HTTP response code as 400                                                # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies                             # src/test/resources/features/dateFXRates.feature:99
+    Given I have access to Foreign Exchange rates api                                              # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with base "INR" and symbols "AOD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the HTTP response code as 400                                                # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies                                 # src/test/resources/features/dateFXRates.feature:100
+    Given I have access to Foreign Exchange rates api                                                  # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with base "INR,GBP" and symbols "AUD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the HTTP response code as 400                                                    # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  Scenario: Validate the base rate is Euro for blank base rate                     # src/test/resources/features/dateFXRates.feature:102
+    Given I have access to Foreign Exchange rates api                              # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with "base" as "" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "EUR"                                     # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  Scenario: Validate the base rate is Euro for blank symbol                           # src/test/resources/features/dateFXRates.feature:107
+    Given I have access to Foreign Exchange rates api                                 # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with "symbols" as "" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "EUR"                                        # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  @Regression
+  Scenario: Validate the default base rate for blank symbol with valid base rate                # src/test/resources/features/dateFXRates.feature:113
+    Given I have access to Foreign Exchange rates api                                           # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with base "INR" and symbols "" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "INR"                                                  # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  @Regression
+  Scenario: Validate the base rate is Euro for blank base rate and symbol                    # src/test/resources/features/dateFXRates.feature:119
+    Given I have access to Foreign Exchange rates api                                        # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with base "" and symbols "" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "EUR"                                               # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  @Regression
+  Scenario: Validate the base rate is Euro for blank base rate with valid symbol                # src/test/resources/features/dateFXRates.feature:125
+    Given I have access to Foreign Exchange rates api                                           # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "2010-01-12" information to the FX api along with base "" and symbols "CAD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "EUR"                                                  # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+Feature: Latest Exchange Rates
+  As a User
+  I want to be able to covers different scenarios for Latest Foreign Exchange rates API
+  So that I can make sure that the API is fit for purpose in the use of the exchange rate for financial reasons
+
+  @Regression @Smoke
+  Scenario: Validate API availability                            # src/test/resources/features/latestFXRates.feature:7
+    Given I have access to Foreign Exchange rates api            # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "latest" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the HTTP response code as 200              # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression @Smoke
+  Scenario: Validate invalid API response payload                # src/test/resources/features/latestFXRates.feature:13
+    Given I have access to Foreign Exchange rates api            # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "latest" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the "base" rate as "EUR"                   # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the default date as yesterday               # RatesSteps.iShouldSeeTheDefaultDateAsYesterday()
+      org.junit.ComparisonFailure: expected:<"2020-04-2[5]"> but was:<"2020-04-2[4]">
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDateAsInTheResponse(RatesSteps.java:53)
+	at stepDefinitions.RatesSteps.iShouldSeeTheDefaultDateAsYesterday(RatesSteps.java:79)
+	at ✽.I should see the default date as yesterday(src/test/resources/features/latestFXRates.feature:17)
+
+    And I should see GBP as one of the exchange rate             # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression
+  Scenario: Validate the default base rate is Euro               # src/test/resources/features/latestFXRates.feature:21
+    Given I have access to Foreign Exchange rates api            # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "latest" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the "base" rate as "EUR"                   # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  Scenario Outline: Validate the default base rate can be changed to any other currencies # src/test/resources/features/latestFXRates.feature:26
+    Given I have access to Foreign Exchange rates api
+    When I pass the "latest" information to the FX api along with "base" as "<currency>"
+    Then I should see the "base" rate as "<currency>"
+
+    Examples: 
+
+  Scenario Outline: Validate the default base rate can be changed to any other currencies # src/test/resources/features/latestFXRates.feature:33
+    Given I have access to Foreign Exchange rates api                                     # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with "base" as "IDR"         # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "IDR"                                            # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  Scenario Outline: Validate the default base rate can be changed to any other currencies # src/test/resources/features/latestFXRates.feature:34
+    Given I have access to Foreign Exchange rates api                                     # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with "base" as "ZAR"         # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "ZAR"                                            # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  Scenario Outline: Validate the default base rate can be changed to any other currencies # src/test/resources/features/latestFXRates.feature:35
+    Given I have access to Foreign Exchange rates api                                     # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with "base" as "TRY"         # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "TRY"                                            # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  Scenario Outline: Validate specific currency rates # src/test/resources/features/latestFXRates.feature:37
+    Given I have access to Foreign Exchange rates api
+    When I pass the "latest" information to the FX api along with "symbols" as "<symbols>"
+    Then I should see the exchange rate based on the <symbols>
+
+    Examples: 
+
+  Scenario Outline: Validate specific currency rates                                     # src/test/resources/features/latestFXRates.feature:44
+    Given I have access to Foreign Exchange rates api                                    # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with "symbols" as "USD,USD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the exchange rate based on the USD,USD                             # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  Scenario Outline: Validate specific currency rates                                     # src/test/resources/features/latestFXRates.feature:45
+    Given I have access to Foreign Exchange rates api                                    # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with "symbols" as "USD,GBP" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the exchange rate based on the USD,GBP                             # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  Scenario Outline: Validate specific currency rates                                         # src/test/resources/features/latestFXRates.feature:46
+    Given I have access to Foreign Exchange rates api                                        # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with "symbols" as "RON,DKK,INR" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the exchange rate based on the RON,DKK,INR                             # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific currency rate to a base rate # src/test/resources/features/latestFXRates.feature:49
+    Given I have access to Foreign Exchange rates api
+    When I pass the "latest" information to the FX api along with base "<currency>" and symbols "<symbols>"
+    Then I should see the "base" rate as "<currency>"
+    And I should see the exchange rate based on the <symbols>
+
+    Examples: 
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific currency rate to a base rate                             # src/test/resources/features/latestFXRates.feature:57
+    Given I have access to Foreign Exchange rates api                                          # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "USD" and symbols "GBP" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "USD"                                                 # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the exchange rate based on the GBP                                        # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific currency rate to a base rate                             # src/test/resources/features/latestFXRates.feature:58
+    Given I have access to Foreign Exchange rates api                                          # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "INR" and symbols "AUD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "INR"                                                 # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the exchange rate based on the AUD                                        # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  @Regression @Smoke
+  Scenario Outline: Validate specific currency rate to a base rate                             # src/test/resources/features/latestFXRates.feature:59
+    Given I have access to Foreign Exchange rates api                                          # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "USD" and symbols "USD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "USD"                                                 # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+    And I should see the exchange rate based on the USD                                        # RatesSteps.IShouldSeeTheExchangeRateBasedOnThe(String)
+
+  Scenario: Validate invalid API response                       # src/test/resources/features/latestFXRates.feature:61
+    Given I have access to Foreign Exchange rates api           # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I append "lates" at the end of Exchange rates Base API # RatesSteps.iAppendAtTheEndOfExchangeRatesBaseAPI(String)
+    Then I should see the HTTP response code as 400             # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies # src/test/resources/features/latestFXRates.feature:67
+    Given I have access to Foreign Exchange rates api
+    When I pass the "latest" information to the FX api along with base "<currency>" and symbols "<symbols>"
+    Then I should see the HTTP response code as 400
+
+    Examples: 
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies                         # src/test/resources/features/latestFXRates.feature:74
+    Given I have access to Foreign Exchange rates api                                          # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "USd" and symbols "GBP" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the HTTP response code as 400                                            # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies                         # src/test/resources/features/latestFXRates.feature:75
+    Given I have access to Foreign Exchange rates api                                          # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "inr" and symbols "AUD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the HTTP response code as 400                                            # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies                         # src/test/resources/features/latestFXRates.feature:76
+    Given I have access to Foreign Exchange rates api                                          # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "INR" and symbols "AOD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the HTTP response code as 400                                            # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  @Regression
+  Scenario Outline: Validate invalid base rate and exchange currencies                             # src/test/resources/features/latestFXRates.feature:77
+    Given I have access to Foreign Exchange rates api                                              # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "INR,GBP" and symbols "AUD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the HTTP response code as 400                                                # RatesSteps.I_should_see_the_HTTP_response_code_as(int)
+
+  Scenario: Validate the base rate is Euro for blank base rate                 # src/test/resources/features/latestFXRates.feature:79
+    Given I have access to Foreign Exchange rates api                          # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with "base" as "" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "EUR"                                 # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  Scenario: Validate the base rate is Euro for blank symbol                       # src/test/resources/features/latestFXRates.feature:84
+    Given I have access to Foreign Exchange rates api                             # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with "symbols" as "" # RatesSteps.iPassTheInformationToTheFXApiAlongWithAs(String,String,String)
+    Then I should see the "base" rate as "EUR"                                    # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  @Regression
+  Scenario: Validate the default base rate for blank symbol with valid base rate            # src/test/resources/features/latestFXRates.feature:90
+    Given I have access to Foreign Exchange rates api                                       # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "INR" and symbols "" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "INR"                                              # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  @Regression
+  Scenario: Validate the base rate is Euro for blank base rate and symbol                # src/test/resources/features/latestFXRates.feature:96
+    Given I have access to Foreign Exchange rates api                                    # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "" and symbols "" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "EUR"                                           # RatesSteps.iShouldSeeTheBaseRateAs(String,String)
+
+  @Regression
+  Scenario: Validate the base rate is Euro for blank base rate with valid symbol            # src/test/resources/features/latestFXRates.feature:102
+    Given I have access to Foreign Exchange rates api                                       # RatesSteps.iHaveAccessToForeignExchangeRatesApi()
+    When I pass the "latest" information to the FX api along with base "" and symbols "CAD" # RatesSteps.iPassTheInformationToTheFXApiAlongWithBaseAndSymbols(String,String,String)
+    Then I should see the "base" rate as "EUR"                                              # RatesSteps.iShouldSeeTheBaseRateAs(String,String)

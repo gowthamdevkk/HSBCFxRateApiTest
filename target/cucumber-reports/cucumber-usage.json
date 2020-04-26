@@ -1,0 +1,1432 @@
+[
+  {
+    "source": "I append {string} at the end of Exchange rates Base API",
+    "steps": [
+      {
+        "name": "I append \"latest\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 1.672284603,
+          "median": 1.574280648
+        },
+        "durations": [
+          {
+            "duration": 2.524602293,
+            "location": "src/test/resources/features/dateFXRates.feature:9"
+          },
+          {
+            "duration": 1.542575734,
+            "location": "src/test/resources/features/latestFXRates.feature:9"
+          },
+          {
+            "duration": 1.605985562,
+            "location": "src/test/resources/features/latestFXRates.feature:15"
+          },
+          {
+            "duration": 1.015974823,
+            "location": "src/test/resources/features/latestFXRates.feature:23"
+          }
+        ]
+      },
+      {
+        "name": "I append \"2010-01-12\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 1.386343888,
+          "median": 1.386343888
+        },
+        "durations": [
+          {
+            "duration": 1.386343888,
+            "location": "src/test/resources/features/dateFXRates.feature:28"
+          }
+        ]
+      },
+      {
+        "name": "I append \"2050-01-12\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 1.122490066,
+          "median": 1.122490066
+        },
+        "durations": [
+          {
+            "duration": 1.122490066,
+            "location": "src/test/resources/features/dateFXRates.feature:28"
+          }
+        ]
+      },
+      {
+        "name": "I append \"1999-01-03\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 3.243870718,
+          "median": 3.243870718
+        },
+        "durations": [
+          {
+            "duration": 3.243870718,
+            "location": "src/test/resources/features/dateFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I append \"2020-01-\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 0.959249689,
+          "median": 0.959249689
+        },
+        "durations": [
+          {
+            "duration": 0.959249689,
+            "location": "src/test/resources/features/dateFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I append \"2020-13-12\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 0.956871349,
+          "median": 0.956871349
+        },
+        "durations": [
+          {
+            "duration": 0.956871349,
+            "location": "src/test/resources/features/dateFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I append \"2018-12-32\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 1.536556642,
+          "median": 1.536556642
+        },
+        "durations": [
+          {
+            "duration": 1.536556642,
+            "location": "src/test/resources/features/dateFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I append \"20-12-12\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 1.943792647,
+          "median": 1.943792647
+        },
+        "durations": [
+          {
+            "duration": 1.943792647,
+            "location": "src/test/resources/features/dateFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I append \"19990101\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 1.275772328,
+          "median": 1.275772328
+        },
+        "durations": [
+          {
+            "duration": 1.275772328,
+            "location": "src/test/resources/features/dateFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I append \"lates\" at the end of Exchange rates Base API",
+        "aggregatedDurations": {
+          "average": 2.243515475,
+          "median": 2.243515475
+        },
+        "durations": [
+          {
+            "duration": 2.243515475,
+            "location": "src/test/resources/features/latestFXRates.feature:63"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I have access to Foreign Exchange rates api$",
+    "steps": [
+      {
+        "name": "I have access to Foreign Exchange rates api",
+        "aggregatedDurations": {
+          "average": 0.008952948,
+          "median": 0.000217795
+        },
+        "durations": [
+          {
+            "duration": 0.471652421,
+            "location": "src/test/resources/features/dateFXRates.feature:8"
+          },
+          {
+            "duration": 0.000477453,
+            "location": "src/test/resources/features/dateFXRates.feature:14"
+          },
+          {
+            "duration": 0.000285385,
+            "location": "src/test/resources/features/dateFXRates.feature:14"
+          },
+          {
+            "duration": 0.000397043,
+            "location": "src/test/resources/features/dateFXRates.feature:14"
+          },
+          {
+            "duration": 0.000247516,
+            "location": "src/test/resources/features/dateFXRates.feature:14"
+          },
+          {
+            "duration": 0.000356215,
+            "location": "src/test/resources/features/dateFXRates.feature:27"
+          },
+          {
+            "duration": 0.000189522,
+            "location": "src/test/resources/features/dateFXRates.feature:27"
+          },
+          {
+            "duration": 0.000435657,
+            "location": "src/test/resources/features/dateFXRates.feature:38"
+          },
+          {
+            "duration": 0.000223124,
+            "location": "src/test/resources/features/dateFXRates.feature:38"
+          },
+          {
+            "duration": 0.000254871,
+            "location": "src/test/resources/features/dateFXRates.feature:38"
+          },
+          {
+            "duration": 0.00020433,
+            "location": "src/test/resources/features/dateFXRates.feature:38"
+          },
+          {
+            "duration": 0.000501263,
+            "location": "src/test/resources/features/dateFXRates.feature:38"
+          },
+          {
+            "duration": 0.000305195,
+            "location": "src/test/resources/features/dateFXRates.feature:38"
+          },
+          {
+            "duration": 0.000313263,
+            "location": "src/test/resources/features/dateFXRates.feature:52"
+          },
+          {
+            "duration": 0.00029381,
+            "location": "src/test/resources/features/dateFXRates.feature:52"
+          },
+          {
+            "duration": 0.002216433,
+            "location": "src/test/resources/features/dateFXRates.feature:52"
+          },
+          {
+            "duration": 0.000313095,
+            "location": "src/test/resources/features/dateFXRates.feature:64"
+          },
+          {
+            "duration": 0.000213191,
+            "location": "src/test/resources/features/dateFXRates.feature:64"
+          },
+          {
+            "duration": 0.000710098,
+            "location": "src/test/resources/features/dateFXRates.feature:64"
+          },
+          {
+            "duration": 0.000217795,
+            "location": "src/test/resources/features/dateFXRates.feature:76"
+          },
+          {
+            "duration": 0.000205719,
+            "location": "src/test/resources/features/dateFXRates.feature:76"
+          },
+          {
+            "duration": 0.000186856,
+            "location": "src/test/resources/features/dateFXRates.feature:76"
+          },
+          {
+            "duration": 0.000324401,
+            "location": "src/test/resources/features/dateFXRates.feature:76"
+          },
+          {
+            "duration": 0.000279894,
+            "location": "src/test/resources/features/dateFXRates.feature:76"
+          },
+          {
+            "duration": 0.00021647,
+            "location": "src/test/resources/features/dateFXRates.feature:91"
+          },
+          {
+            "duration": 0.000196173,
+            "location": "src/test/resources/features/dateFXRates.feature:91"
+          },
+          {
+            "duration": 0.00028816,
+            "location": "src/test/resources/features/dateFXRates.feature:91"
+          },
+          {
+            "duration": 0.000215742,
+            "location": "src/test/resources/features/dateFXRates.feature:91"
+          },
+          {
+            "duration": 0.000152582,
+            "location": "src/test/resources/features/dateFXRates.feature:103"
+          },
+          {
+            "duration": 0.000157064,
+            "location": "src/test/resources/features/dateFXRates.feature:108"
+          },
+          {
+            "duration": 0.000178941,
+            "location": "src/test/resources/features/dateFXRates.feature:114"
+          },
+          {
+            "duration": 0.000159425,
+            "location": "src/test/resources/features/dateFXRates.feature:120"
+          },
+          {
+            "duration": 0.000306402,
+            "location": "src/test/resources/features/dateFXRates.feature:126"
+          },
+          {
+            "duration": 0.000299478,
+            "location": "src/test/resources/features/latestFXRates.feature:8"
+          },
+          {
+            "duration": 0.000158296,
+            "location": "src/test/resources/features/latestFXRates.feature:14"
+          },
+          {
+            "duration": 0.000253487,
+            "location": "src/test/resources/features/latestFXRates.feature:22"
+          },
+          {
+            "duration": 0.000151228,
+            "location": "src/test/resources/features/latestFXRates.feature:27"
+          },
+          {
+            "duration": 0.000155857,
+            "location": "src/test/resources/features/latestFXRates.feature:27"
+          },
+          {
+            "duration": 0.000200774,
+            "location": "src/test/resources/features/latestFXRates.feature:27"
+          },
+          {
+            "duration": 0.000218414,
+            "location": "src/test/resources/features/latestFXRates.feature:38"
+          },
+          {
+            "duration": 0.000143235,
+            "location": "src/test/resources/features/latestFXRates.feature:38"
+          },
+          {
+            "duration": 0.000142655,
+            "location": "src/test/resources/features/latestFXRates.feature:38"
+          },
+          {
+            "duration": 0.00016088,
+            "location": "src/test/resources/features/latestFXRates.feature:50"
+          },
+          {
+            "duration": 0.000160657,
+            "location": "src/test/resources/features/latestFXRates.feature:50"
+          },
+          {
+            "duration": 0.000251988,
+            "location": "src/test/resources/features/latestFXRates.feature:50"
+          },
+          {
+            "duration": 0.005829936,
+            "location": "src/test/resources/features/latestFXRates.feature:62"
+          },
+          {
+            "duration": 0.000223504,
+            "location": "src/test/resources/features/latestFXRates.feature:68"
+          },
+          {
+            "duration": 0.000209465,
+            "location": "src/test/resources/features/latestFXRates.feature:68"
+          },
+          {
+            "duration": 0.000271203,
+            "location": "src/test/resources/features/latestFXRates.feature:68"
+          },
+          {
+            "duration": 0.000141716,
+            "location": "src/test/resources/features/latestFXRates.feature:68"
+          },
+          {
+            "duration": 0.000115383,
+            "location": "src/test/resources/features/latestFXRates.feature:80"
+          },
+          {
+            "duration": 0.000174492,
+            "location": "src/test/resources/features/latestFXRates.feature:85"
+          },
+          {
+            "duration": 0.000154271,
+            "location": "src/test/resources/features/latestFXRates.feature:91"
+          },
+          {
+            "duration": 0.00016424,
+            "location": "src/test/resources/features/latestFXRates.feature:97"
+          },
+          {
+            "duration": 0.000155487,
+            "location": "src/test/resources/features/latestFXRates.feature:103"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I pass the {string} information to the FX api along with {string} as {string}",
+    "steps": [
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with \"symbols\" as \"USD\"",
+        "aggregatedDurations": {
+          "average": 1.352238581,
+          "median": 1.352238581
+        },
+        "durations": [
+          {
+            "duration": 1.352238581,
+            "location": "src/test/resources/features/dateFXRates.feature:15"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2000-01-01\" information to the FX api along with \"symbols\" as \"SIT\"",
+        "aggregatedDurations": {
+          "average": 1.040498458,
+          "median": 1.040498458
+        },
+        "durations": [
+          {
+            "duration": 1.040498458,
+            "location": "src/test/resources/features/dateFXRates.feature:15"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"1999-01-04\" information to the FX api along with \"symbols\" as \"KRW\"",
+        "aggregatedDurations": {
+          "average": 1.038915461,
+          "median": 1.038915461
+        },
+        "durations": [
+          {
+            "duration": 1.038915461,
+            "location": "src/test/resources/features/dateFXRates.feature:15"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2020-01-04\" information to the FX api along with \"symbols\" as \"PHP\"",
+        "aggregatedDurations": {
+          "average": 1.233614233,
+          "median": 1.233614233
+        },
+        "durations": [
+          {
+            "duration": 1.233614233,
+            "location": "src/test/resources/features/dateFXRates.feature:15"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with \"base\" as \"IDR\"",
+        "aggregatedDurations": {
+          "average": 1.280814234,
+          "median": 1.280814234
+        },
+        "durations": [
+          {
+            "duration": 1.280814234,
+            "location": "src/test/resources/features/dateFXRates.feature:53"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with \"base\" as \"ZAR\"",
+        "aggregatedDurations": {
+          "average": 1.084148077,
+          "median": 1.084148077
+        },
+        "durations": [
+          {
+            "duration": 1.084148077,
+            "location": "src/test/resources/features/dateFXRates.feature:53"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with \"base\" as \"TRY\"",
+        "aggregatedDurations": {
+          "average": 2.087669488,
+          "median": 2.087669488
+        },
+        "durations": [
+          {
+            "duration": 2.087669488,
+            "location": "src/test/resources/features/dateFXRates.feature:53"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2020-04-25\" information to the FX api along with \"symbols\" as \"USD,USD\"",
+        "aggregatedDurations": {
+          "average": 1.390219115,
+          "median": 1.390219115
+        },
+        "durations": [
+          {
+            "duration": 1.390219115,
+            "location": "src/test/resources/features/dateFXRates.feature:65"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2020-04-25\" information to the FX api along with \"symbols\" as \"USD,GBP\"",
+        "aggregatedDurations": {
+          "average": 1.170505722,
+          "median": 1.170505722
+        },
+        "durations": [
+          {
+            "duration": 1.170505722,
+            "location": "src/test/resources/features/dateFXRates.feature:65"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2020-04-25\" information to the FX api along with \"symbols\" as \"RON,DKK,INR\"",
+        "aggregatedDurations": {
+          "average": 1.53402012,
+          "median": 1.53402012
+        },
+        "durations": [
+          {
+            "duration": 1.53402012,
+            "location": "src/test/resources/features/dateFXRates.feature:65"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with \"base\" as \"\"",
+        "aggregatedDurations": {
+          "average": 1.336642205,
+          "median": 1.336642205
+        },
+        "durations": [
+          {
+            "duration": 1.336642205,
+            "location": "src/test/resources/features/dateFXRates.feature:104"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with \"symbols\" as \"\"",
+        "aggregatedDurations": {
+          "average": 1.054455741,
+          "median": 1.054455741
+        },
+        "durations": [
+          {
+            "duration": 1.054455741,
+            "location": "src/test/resources/features/dateFXRates.feature:109"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with \"base\" as \"IDR\"",
+        "aggregatedDurations": {
+          "average": 1.112523097,
+          "median": 1.112523097
+        },
+        "durations": [
+          {
+            "duration": 1.112523097,
+            "location": "src/test/resources/features/latestFXRates.feature:28"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with \"base\" as \"ZAR\"",
+        "aggregatedDurations": {
+          "average": 1.03218554,
+          "median": 1.03218554
+        },
+        "durations": [
+          {
+            "duration": 1.03218554,
+            "location": "src/test/resources/features/latestFXRates.feature:28"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with \"base\" as \"TRY\"",
+        "aggregatedDurations": {
+          "average": 0.858754546,
+          "median": 0.858754546
+        },
+        "durations": [
+          {
+            "duration": 0.858754546,
+            "location": "src/test/resources/features/latestFXRates.feature:28"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with \"symbols\" as \"USD,USD\"",
+        "aggregatedDurations": {
+          "average": 0.851063468,
+          "median": 0.851063468
+        },
+        "durations": [
+          {
+            "duration": 0.851063468,
+            "location": "src/test/resources/features/latestFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with \"symbols\" as \"USD,GBP\"",
+        "aggregatedDurations": {
+          "average": 1.061292011,
+          "median": 1.061292011
+        },
+        "durations": [
+          {
+            "duration": 1.061292011,
+            "location": "src/test/resources/features/latestFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with \"symbols\" as \"RON,DKK,INR\"",
+        "aggregatedDurations": {
+          "average": 1.710501715,
+          "median": 1.710501715
+        },
+        "durations": [
+          {
+            "duration": 1.710501715,
+            "location": "src/test/resources/features/latestFXRates.feature:39"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with \"base\" as \"\"",
+        "aggregatedDurations": {
+          "average": 1.398948013,
+          "median": 1.398948013
+        },
+        "durations": [
+          {
+            "duration": 1.398948013,
+            "location": "src/test/resources/features/latestFXRates.feature:81"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with \"symbols\" as \"\"",
+        "aggregatedDurations": {
+          "average": 1.465388161,
+          "median": 1.465388161
+        },
+        "durations": [
+          {
+            "duration": 1.465388161,
+            "location": "src/test/resources/features/latestFXRates.feature:86"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I should see the exchange rate based on the (.*)",
+    "steps": [
+      {
+        "name": "I should see the exchange rate based on the USD,USD",
+        "aggregatedDurations": {
+          "average": 0.000281103,
+          "median": 0.000281103
+        },
+        "durations": [
+          {
+            "duration": 0.000478836,
+            "location": "src/test/resources/features/dateFXRates.feature:66"
+          },
+          {
+            "duration": 0.000083371,
+            "location": "src/test/resources/features/latestFXRates.feature:40"
+          }
+        ]
+      },
+      {
+        "name": "I should see the exchange rate based on the USD,GBP",
+        "aggregatedDurations": {
+          "average": 0.000055493,
+          "median": 0.000055493
+        },
+        "durations": [
+          {
+            "duration": 0.000069013,
+            "location": "src/test/resources/features/dateFXRates.feature:66"
+          },
+          {
+            "duration": 0.000041974,
+            "location": "src/test/resources/features/latestFXRates.feature:40"
+          }
+        ]
+      },
+      {
+        "name": "I should see the exchange rate based on the RON,DKK,INR",
+        "aggregatedDurations": {
+          "average": 0.000068138,
+          "median": 0.000068138
+        },
+        "durations": [
+          {
+            "duration": 0.000056961,
+            "location": "src/test/resources/features/dateFXRates.feature:66"
+          },
+          {
+            "duration": 0.000079315,
+            "location": "src/test/resources/features/latestFXRates.feature:40"
+          }
+        ]
+      },
+      {
+        "name": "I should see the exchange rate based on the IDR",
+        "aggregatedDurations": {
+          "average": 0.000029475,
+          "median": 0.000029475
+        },
+        "durations": [
+          {
+            "duration": 0.000029475,
+            "location": "src/test/resources/features/dateFXRates.feature:79"
+          }
+        ]
+      },
+      {
+        "name": "I should see the exchange rate based on the RON,DKK",
+        "aggregatedDurations": {
+          "average": 0.000032522,
+          "median": 0.000032522
+        },
+        "durations": [
+          {
+            "duration": 0.000032522,
+            "location": "src/test/resources/features/dateFXRates.feature:79"
+          }
+        ]
+      },
+      {
+        "name": "I should see the exchange rate based on the GBP",
+        "aggregatedDurations": {
+          "average": 0.000052473,
+          "median": 0.000052473
+        },
+        "durations": [
+          {
+            "duration": 0.000070803,
+            "location": "src/test/resources/features/dateFXRates.feature:79"
+          },
+          {
+            "duration": 0.000034143,
+            "location": "src/test/resources/features/latestFXRates.feature:53"
+          }
+        ]
+      },
+      {
+        "name": "I should see the exchange rate based on the AUD",
+        "aggregatedDurations": {
+          "average": 0.000028567,
+          "median": 0.000028567
+        },
+        "durations": [
+          {
+            "duration": 0.000029713,
+            "location": "src/test/resources/features/dateFXRates.feature:79"
+          },
+          {
+            "duration": 0.000027422,
+            "location": "src/test/resources/features/latestFXRates.feature:53"
+          }
+        ]
+      },
+      {
+        "name": "I should see the exchange rate based on the USD",
+        "aggregatedDurations": {
+          "average": 0.000030279,
+          "median": 0.000030279
+        },
+        "durations": [
+          {
+            "duration": 0.000028176,
+            "location": "src/test/resources/features/dateFXRates.feature:79"
+          },
+          {
+            "duration": 0.000032383,
+            "location": "src/test/resources/features/latestFXRates.feature:53"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see the HTTP response code as (.*)$",
+    "steps": [
+      {
+        "name": "I should see the HTTP response code as 400",
+        "aggregatedDurations": {
+          "average": 0.000176979,
+          "median": 0.000061595
+        },
+        "durations": [
+          {
+            "duration": 0.00151803,
+            "location": "src/test/resources/features/dateFXRates.feature:40"
+          },
+          {
+            "duration": 0.000053507,
+            "location": "src/test/resources/features/dateFXRates.feature:40"
+          },
+          {
+            "duration": 0.000061595,
+            "location": "src/test/resources/features/dateFXRates.feature:40"
+          },
+          {
+            "duration": 0.000107054,
+            "location": "src/test/resources/features/dateFXRates.feature:40"
+          },
+          {
+            "duration": 0.000152848,
+            "location": "src/test/resources/features/dateFXRates.feature:40"
+          },
+          {
+            "duration": 0.000046858,
+            "location": "src/test/resources/features/dateFXRates.feature:40"
+          },
+          {
+            "duration": 0.000051439,
+            "location": "src/test/resources/features/dateFXRates.feature:93"
+          },
+          {
+            "duration": 0.000114185,
+            "location": "src/test/resources/features/dateFXRates.feature:93"
+          },
+          {
+            "duration": 0.000061969,
+            "location": "src/test/resources/features/dateFXRates.feature:93"
+          },
+          {
+            "duration": 0.000040244,
+            "location": "src/test/resources/features/dateFXRates.feature:93"
+          },
+          {
+            "duration": 0.000084928,
+            "location": "src/test/resources/features/latestFXRates.feature:64"
+          },
+          {
+            "duration": 0.000048983,
+            "location": "src/test/resources/features/latestFXRates.feature:70"
+          },
+          {
+            "duration": 0.000051553,
+            "location": "src/test/resources/features/latestFXRates.feature:70"
+          },
+          {
+            "duration": 0.000043255,
+            "location": "src/test/resources/features/latestFXRates.feature:70"
+          },
+          {
+            "duration": 0.000218243,
+            "location": "src/test/resources/features/latestFXRates.feature:70"
+          }
+        ]
+      },
+      {
+        "name": "I should see the HTTP response code as 200",
+        "aggregatedDurations": {
+          "average": 0.000053396,
+          "median": 0.000053396
+        },
+        "durations": [
+          {
+            "duration": 0.000053396,
+            "location": "src/test/resources/features/latestFXRates.feature:10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I should see valid date in the response",
+    "steps": [
+      {
+        "name": "I should see valid date in the response",
+        "aggregatedDurations": {
+          "average": 0.000299845,
+          "median": 0.000299845
+        },
+        "durations": [
+          {
+            "duration": 0.000299845,
+            "location": "src/test/resources/features/dateFXRates.feature:29"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I pass the {string} information to the FX api along with base {string} and symbols {string}",
+    "steps": [
+      {
+        "name": "I pass the \"2019-01-12\" information to the FX api along with base \"IDR\" and symbols \"IDR\"",
+        "aggregatedDurations": {
+          "average": 2.041918354,
+          "median": 2.041918354
+        },
+        "durations": [
+          {
+            "duration": 2.041918354,
+            "location": "src/test/resources/features/dateFXRates.feature:77"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2019-01-12\" information to the FX api along with base \"CAD\" and symbols \"RON,DKK\"",
+        "aggregatedDurations": {
+          "average": 1.841529666,
+          "median": 1.841529666
+        },
+        "durations": [
+          {
+            "duration": 1.841529666,
+            "location": "src/test/resources/features/dateFXRates.feature:77"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2019-01-12\" information to the FX api along with base \"USD\" and symbols \"GBP\"",
+        "aggregatedDurations": {
+          "average": 0.921896601,
+          "median": 0.921896601
+        },
+        "durations": [
+          {
+            "duration": 0.921896601,
+            "location": "src/test/resources/features/dateFXRates.feature:77"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2019-01-12\" information to the FX api along with base \"INR\" and symbols \"AUD\"",
+        "aggregatedDurations": {
+          "average": 1.327855891,
+          "median": 1.327855891
+        },
+        "durations": [
+          {
+            "duration": 1.327855891,
+            "location": "src/test/resources/features/dateFXRates.feature:77"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2019-01-12\" information to the FX api along with base \"USD\" and symbols \"USD\"",
+        "aggregatedDurations": {
+          "average": 1.331552923,
+          "median": 1.331552923
+        },
+        "durations": [
+          {
+            "duration": 1.331552923,
+            "location": "src/test/resources/features/dateFXRates.feature:77"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with base \"USd\" and symbols \"GBP\"",
+        "aggregatedDurations": {
+          "average": 1.25178828,
+          "median": 1.25178828
+        },
+        "durations": [
+          {
+            "duration": 1.25178828,
+            "location": "src/test/resources/features/dateFXRates.feature:92"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with base \"inr\" and symbols \"AUD\"",
+        "aggregatedDurations": {
+          "average": 1.246794318,
+          "median": 1.246794318
+        },
+        "durations": [
+          {
+            "duration": 1.246794318,
+            "location": "src/test/resources/features/dateFXRates.feature:92"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with base \"INR\" and symbols \"AOD\"",
+        "aggregatedDurations": {
+          "average": 0.978091527,
+          "median": 0.978091527
+        },
+        "durations": [
+          {
+            "duration": 0.978091527,
+            "location": "src/test/resources/features/dateFXRates.feature:92"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with base \"INR,GBP\" and symbols \"AUD\"",
+        "aggregatedDurations": {
+          "average": 1.328736936,
+          "median": 1.328736936
+        },
+        "durations": [
+          {
+            "duration": 1.328736936,
+            "location": "src/test/resources/features/dateFXRates.feature:92"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with base \"INR\" and symbols \"\"",
+        "aggregatedDurations": {
+          "average": 1.08871129,
+          "median": 1.08871129
+        },
+        "durations": [
+          {
+            "duration": 1.08871129,
+            "location": "src/test/resources/features/dateFXRates.feature:115"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with base \"\" and symbols \"\"",
+        "aggregatedDurations": {
+          "average": 1.084666011,
+          "median": 1.084666011
+        },
+        "durations": [
+          {
+            "duration": 1.084666011,
+            "location": "src/test/resources/features/dateFXRates.feature:121"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"2010-01-12\" information to the FX api along with base \"\" and symbols \"CAD\"",
+        "aggregatedDurations": {
+          "average": 1.167163056,
+          "median": 1.167163056
+        },
+        "durations": [
+          {
+            "duration": 1.167163056,
+            "location": "src/test/resources/features/dateFXRates.feature:127"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"USD\" and symbols \"GBP\"",
+        "aggregatedDurations": {
+          "average": 1.999292276,
+          "median": 1.999292276
+        },
+        "durations": [
+          {
+            "duration": 1.999292276,
+            "location": "src/test/resources/features/latestFXRates.feature:51"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"INR\" and symbols \"AUD\"",
+        "aggregatedDurations": {
+          "average": 1.188366716,
+          "median": 1.188366716
+        },
+        "durations": [
+          {
+            "duration": 1.188366716,
+            "location": "src/test/resources/features/latestFXRates.feature:51"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"USD\" and symbols \"USD\"",
+        "aggregatedDurations": {
+          "average": 1.064134663,
+          "median": 1.064134663
+        },
+        "durations": [
+          {
+            "duration": 1.064134663,
+            "location": "src/test/resources/features/latestFXRates.feature:51"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"USd\" and symbols \"GBP\"",
+        "aggregatedDurations": {
+          "average": 1.223518211,
+          "median": 1.223518211
+        },
+        "durations": [
+          {
+            "duration": 1.223518211,
+            "location": "src/test/resources/features/latestFXRates.feature:69"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"inr\" and symbols \"AUD\"",
+        "aggregatedDurations": {
+          "average": 3.038308154,
+          "median": 3.038308154
+        },
+        "durations": [
+          {
+            "duration": 3.038308154,
+            "location": "src/test/resources/features/latestFXRates.feature:69"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"INR\" and symbols \"AOD\"",
+        "aggregatedDurations": {
+          "average": 1.03606818,
+          "median": 1.03606818
+        },
+        "durations": [
+          {
+            "duration": 1.03606818,
+            "location": "src/test/resources/features/latestFXRates.feature:69"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"INR,GBP\" and symbols \"AUD\"",
+        "aggregatedDurations": {
+          "average": 1.355191817,
+          "median": 1.355191817
+        },
+        "durations": [
+          {
+            "duration": 1.355191817,
+            "location": "src/test/resources/features/latestFXRates.feature:69"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"INR\" and symbols \"\"",
+        "aggregatedDurations": {
+          "average": 1.023626745,
+          "median": 1.023626745
+        },
+        "durations": [
+          {
+            "duration": 1.023626745,
+            "location": "src/test/resources/features/latestFXRates.feature:92"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"\" and symbols \"\"",
+        "aggregatedDurations": {
+          "average": 1.172379014,
+          "median": 1.172379014
+        },
+        "durations": [
+          {
+            "duration": 1.172379014,
+            "location": "src/test/resources/features/latestFXRates.feature:98"
+          }
+        ]
+      },
+      {
+        "name": "I pass the \"latest\" information to the FX api along with base \"\" and symbols \"CAD\"",
+        "aggregatedDurations": {
+          "average": 0.937627864,
+          "median": 0.937627864
+        },
+        "durations": [
+          {
+            "duration": 0.937627864,
+            "location": "src/test/resources/features/latestFXRates.feature:104"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I should see the date as (.*) in the response",
+    "steps": [
+      {
+        "name": "I should see the date as 2010-01-12 in the response",
+        "aggregatedDurations": {
+          "average": 0.000023591,
+          "median": 0.000022187
+        },
+        "durations": [
+          {
+            "duration": 0.00003003,
+            "location": "src/test/resources/features/dateFXRates.feature:55"
+          },
+          {
+            "duration": 0.000022187,
+            "location": "src/test/resources/features/dateFXRates.feature:55"
+          },
+          {
+            "duration": 0.000018558,
+            "location": "src/test/resources/features/dateFXRates.feature:55"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I should see the {string} and exchange rate as {double}",
+    "steps": [
+      {
+        "name": "I should see the \"USD\" and exchange rate as 1.4481",
+        "aggregatedDurations": {
+          "average": 0.002822428,
+          "median": 0.002822428
+        },
+        "durations": [
+          {
+            "duration": 0.002822428,
+            "location": "src/test/resources/features/dateFXRates.feature:16"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"SIT\" and exchange rate as 198.9055",
+        "aggregatedDurations": {
+          "average": 0.000138397,
+          "median": 0.000138397
+        },
+        "durations": [
+          {
+            "duration": 0.000138397,
+            "location": "src/test/resources/features/dateFXRates.feature:16"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"KRW\" and exchange rate as 1398.59",
+        "aggregatedDurations": {
+          "average": 0.000164675,
+          "median": 0.000164675
+        },
+        "durations": [
+          {
+            "duration": 0.000164675,
+            "location": "src/test/resources/features/dateFXRates.feature:16"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"PHP\" and exchange rate as 56.983",
+        "aggregatedDurations": {
+          "average": 0.000121295,
+          "median": 0.000121295
+        },
+        "durations": [
+          {
+            "duration": 0.000121295,
+            "location": "src/test/resources/features/dateFXRates.feature:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "I should see the {string} rate as {string}",
+    "steps": [
+      {
+        "name": "I should see the \"base\" rate as \"IDR\"",
+        "aggregatedDurations": {
+          "average": 0.00015042,
+          "median": 0.000100739
+        },
+        "durations": [
+          {
+            "duration": 0.000100739,
+            "location": "src/test/resources/features/dateFXRates.feature:54"
+          },
+          {
+            "duration": 0.000061064,
+            "location": "src/test/resources/features/dateFXRates.feature:78"
+          },
+          {
+            "duration": 0.000289459,
+            "location": "src/test/resources/features/latestFXRates.feature:29"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"base\" rate as \"ZAR\"",
+        "aggregatedDurations": {
+          "average": 0.000070051,
+          "median": 0.000070051
+        },
+        "durations": [
+          {
+            "duration": 0.000064215,
+            "location": "src/test/resources/features/dateFXRates.feature:54"
+          },
+          {
+            "duration": 0.000075888,
+            "location": "src/test/resources/features/latestFXRates.feature:29"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"base\" rate as \"TRY\"",
+        "aggregatedDurations": {
+          "average": 0.00005351,
+          "median": 0.00005351
+        },
+        "durations": [
+          {
+            "duration": 0.000050713,
+            "location": "src/test/resources/features/dateFXRates.feature:54"
+          },
+          {
+            "duration": 0.000056308,
+            "location": "src/test/resources/features/latestFXRates.feature:29"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"base\" rate as \"CAD\"",
+        "aggregatedDurations": {
+          "average": 0.000058861,
+          "median": 0.000058861
+        },
+        "durations": [
+          {
+            "duration": 0.000058861,
+            "location": "src/test/resources/features/dateFXRates.feature:78"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"base\" rate as \"USD\"",
+        "aggregatedDurations": {
+          "average": 0.000058467,
+          "median": 0.000059094
+        },
+        "durations": [
+          {
+            "duration": 0.00005273,
+            "location": "src/test/resources/features/dateFXRates.feature:78"
+          },
+          {
+            "duration": 0.000062951,
+            "location": "src/test/resources/features/dateFXRates.feature:78"
+          },
+          {
+            "duration": 0.000062556,
+            "location": "src/test/resources/features/latestFXRates.feature:52"
+          },
+          {
+            "duration": 0.000055632,
+            "location": "src/test/resources/features/latestFXRates.feature:52"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"base\" rate as \"INR\"",
+        "aggregatedDurations": {
+          "average": 0.00005645,
+          "median": 0.000049433
+        },
+        "durations": [
+          {
+            "duration": 0.000080423,
+            "location": "src/test/resources/features/dateFXRates.feature:78"
+          },
+          {
+            "duration": 0.000047431,
+            "location": "src/test/resources/features/dateFXRates.feature:116"
+          },
+          {
+            "duration": 0.000046512,
+            "location": "src/test/resources/features/latestFXRates.feature:52"
+          },
+          {
+            "duration": 0.000051436,
+            "location": "src/test/resources/features/latestFXRates.feature:93"
+          }
+        ]
+      },
+      {
+        "name": "I should see the \"base\" rate as \"EUR\"",
+        "aggregatedDurations": {
+          "average": 0.000059874,
+          "median": 0.000059829
+        },
+        "durations": [
+          {
+            "duration": 0.000056896,
+            "location": "src/test/resources/features/dateFXRates.feature:105"
+          },
+          {
+            "duration": 0.000060895,
+            "location": "src/test/resources/features/dateFXRates.feature:110"
+          },
+          {
+            "duration": 0.000066504,
+            "location": "src/test/resources/features/dateFXRates.feature:122"
+          },
+          {
+            "duration": 0.000067382,
+            "location": "src/test/resources/features/dateFXRates.feature:128"
+          },
+          {
+            "duration": 0.000058763,
+            "location": "src/test/resources/features/latestFXRates.feature:16"
+          },
+          {
+            "duration": 0.000052776,
+            "location": "src/test/resources/features/latestFXRates.feature:24"
+          },
+          {
+            "duration": 0.000074616,
+            "location": "src/test/resources/features/latestFXRates.feature:82"
+          },
+          {
+            "duration": 0.000044915,
+            "location": "src/test/resources/features/latestFXRates.feature:87"
+          },
+          {
+            "duration": 0.000053326,
+            "location": "src/test/resources/features/latestFXRates.feature:99"
+          },
+          {
+            "duration": 0.000062671,
+            "location": "src/test/resources/features/latestFXRates.feature:105"
+          }
+        ]
+      }
+    ]
+  }
+]

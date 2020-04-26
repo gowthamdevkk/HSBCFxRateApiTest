@@ -1,0 +1,2 @@
+src/test/resources/features/dateFXRates.feature:7:34
+src/test/resources/features/latestFXRates.feature:13
